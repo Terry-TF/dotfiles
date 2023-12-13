@@ -1,2 +1,5 @@
 *.local
 lazygit/state.yml
+nvim/.neoconf.json
+nvim/lazy-lock.json
+nvim/lazyvim.json
