@@ -1,0 +1,54 @@
+[alias]
+    a = add
+	aa = add --all
+    br = branch -vv
+	bra = branch -vv --all
+	ca = commit --amend
+	cm = commit -m
+	co = checkout
+	di = diff
+	f = fetch --tags --prune
+	fa = fetch --all --tags --prune
+	lg = log -p
+    pl = pull
+    ps = push
+	st = status -sb
+    sw = switch
+
+[init]
+    defaultBranch = main
+
+[color]
+	ui = auto
+
+[diff]
+	mnemonicPrefix = true
+	compactionHeuristic = true
+
+[grep]
+	lineNumber = true
+
+[help]
+    autoCorrect = immediate
+
+[diff]
+	tool = nvimdiff
+
+[merge]
+	defaultToUpstream = true
+	tool = nvimdiff
+
+[pull]
+	ff = only
+
+[push]
+	default = upstream
+
+[user]
+	useConfigOnly = true
+
+[core]
+	editor = nvim
+
+[include]
+    path = ~/.config/git/gitconfig.local

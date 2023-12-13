@@ -1,0 +1,36 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+      force: true
+
+- clean:
+    ~/:
+      force: true
+    ~/.config:
+      recursive: true
+
+- shell:
+  - 
+    command: (echo "Install Brewfile (y/n)? " && read ans && [[ "$ans" != "${ans#[Yy]}" ]] && (brew update; [[ "$(uname)" == "Darwin" ]] && brew bundle --file="$HOME/dotfiles/Brewfile/Brewfile_macos" || [[ "$(uname)" == "Linux" ]] && brew bundle --file="$HOME/dotfiles/Brewfile/Brewfile_linux")) || true
+    stdin: true
+    stdout: true
+    stderr: true
+    
+- link:
+    # zsh
+    ~/.zshrc:
+    ~/.config/zsh:
+    # git
+    ~/.config/git/config: git/config
+    ~/.config/git/ignore: git/ignore
+    # lazygit
+    ~/.config/lazygit:
+    # joshuto
+    ~/.config/joshuto:
+    # neofetch
+    ~/.config/neofetch:
+    # nvim
+    ~/.config/nvim:
+    # zellij
+    ~/.config/zellij:
