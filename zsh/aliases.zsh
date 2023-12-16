@@ -29,9 +29,6 @@ alias tree='eza --tree'
 # neofetch
 alias s='neofetch'
 
-# nvim
-alias v='nvim'
-
 # zellij
 alias zl='zellij'
 
