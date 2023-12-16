@@ -11,12 +11,11 @@
       recursive: true
 
 - shell:
-  - 
-    command: (echo "Install Brewfile (y/n)? " && read ans && [[ "$ans" != "${ans#[Yy]}" ]] && (brew update; [[ "$(uname)" == "Darwin" ]] && brew bundle --file="$HOME/dotfiles/Brewfile/Brewfile_macos" || [[ "$(uname)" == "Linux" ]] && brew bundle --file="$HOME/dotfiles/Brewfile/Brewfile_linux")) || true
-    stdin: true
-    stdout: true
-    stderr: true
-    
+    - command: (echo "Install Brewfile (y/n)? " && read ans && [[ "$ans" != "${ans#[Yy]}" ]] && (brew update; [[ "$(uname)" == "Darwin" ]] && brew bundle --file="$HOME/dotfiles/Brewfile/Brewfile_macos" || [[ "$(uname)" == "Linux" ]] && brew bundle --file="$HOME/dotfiles/Brewfile/Brewfile_linux")) || true
+      stdin: true
+      stdout: true
+      stderr: true
+
 - link:
     # zsh
     ~/.zshrc:
@@ -32,5 +31,7 @@
     ~/.config/neofetch:
     # nvim
     ~/.config/nvim:
+    # vim
+    ~/.vim:
     # zellij
     ~/.config/zellij:

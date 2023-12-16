@@ -1,0 +1,45 @@
+set nocompatible
+set encoding=utf-8
+set relativenumber
+set mouse=a
+syntax on
+
+filetype on  " File type detection
+filetype plugin on  " Loading the plugin files for specific file types
+filetype indent on  " Loading the indent file for specific file types with
+
+" Tab and Indent
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set smarttab
+"set expandtab  " Use the space to instead of tab
+set autoindent  " Copy indent from current line when starting a new line
+set smartindent
+set cindent
+
+" Seach and Match
+set hlsearch  " Highlight the search result
+set incsearch  " Real-time search
+set ignorecase
+set smartcase
+set showmatch  " When a bracket is inserted, briefly jump to the matching one
+
+" Display
+set showmode  " Show the current mode
+set t_Co=256  " If under tty, use 256
+set ruler
+set laststatus=2
+
+" Key Bindings
+let mapleader=";"
+inoremap jj <Esc>
+nmap <Leader>q :q<CR>
+nmap <Leader>w :w<CR>
+nmap <Leader>d <C-]>
+nmap <Leader>D <C-t>
+nnoremap H ^
+nnoremap L $
+nnoremap gg magg
+nnoremap G maG
+nnoremap <silent> <Leader>h :<C-u>nohlsearch<CR><C-l>
