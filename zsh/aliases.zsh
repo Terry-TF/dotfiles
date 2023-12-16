@@ -31,7 +31,6 @@ alias s='neofetch'
 
 # nvim
 alias v='nvim'
-alias vi='nvim'
 
 # zellij
 alias zl='zellij'
