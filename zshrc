@@ -14,9 +14,9 @@ export LANG="en_US.UTF-8"
 export EDITOR='nvim'
 
 if [[ "$(uname)" == "Darwin" ]]; then
-[[ -f $ZSH/zshrc.mac]] && source $ZSH/zshrc.mac
+[[ -f $ZSH/zshrc.mac ]] && source $ZSH/zshrc.mac
 elif [[ "$(uname)" == "Linux" ]]; then
-[[ -f $ZSH/zshrc.linux]] && source $ZSH/zshrc.linux
+[[ -f $ZSH/zshrc.linux ]] && source $ZSH/zshrc.linux
 fi
 
 ###----Zinit's installer----###
