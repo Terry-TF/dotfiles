@@ -1,0 +1,6 @@
+###----Brew----###
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+export HOMEBREW_BUNDLE_FILE="$HOME/dotfiles/Brewfile/Brewfile_linux"
+export HOMEBREW_NO_ENV_HINTS=true
+export HOMEBREW_BUNDLE_NO_LOCK=true
+fpath=($(brew --prefix)/share/zsh/site-functions $fpath)

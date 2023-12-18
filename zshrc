@@ -13,19 +13,10 @@ export ZSH=$HOME/.config/zsh
 export LANG="en_US.UTF-8"
 export EDITOR='nvim'
 
-###----Brew----###
 if [[ "$(uname)" == "Darwin" ]]; then
-  eval "$(/opt/homebrew/bin/brew shellenv)"
-  export HOMEBREW_BUNDLE_FILE="$HOME/dotfiles/Brewfile/Brewfile_macos"
+[[ -f $ZSH/zshrc.mac]] && source $ZSH/zshrc.mac
 elif [[ "$(uname)" == "Linux" ]]; then
-  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-  export HOMEBREW_BUNDLE_FILE="$HOME/dotfiles/Brewfile/Brewfile_linux"
-fi
-
-if type brew &>/dev/null; then
-  export HOMEBREW_NO_ENV_HINTS=true
-  export HOMEBREW_BUNDLE_NO_LOCK=true
-  fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
+[[ -f $ZSH/zshrc.linux]] && source $ZSH/zshrc.linux
 fi
 
 ###----Zinit's installer----###
